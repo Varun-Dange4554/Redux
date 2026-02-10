@@ -1,10 +1,14 @@
 import { useState } from "react";
 import { useLocalStorage } from "./hook/useLocalStorage";
 import { useToggle } from "./hook/useToggle";
-
+import {useFetch } from "./hook/useFetch"
 
 function App () {
   const [string,setString] = useState('');
+
+  const { data } = useFetch('https://fakestoreapi.com/products');
+  console.log('🚀 ~ data:', data);
+  
 
   const [value,setValue] = useLocalStorage('name',[]);
   const [toggle,setToggle] = useToggle();
@@ -32,9 +36,21 @@ function App () {
      <button onClick={() =>setToggle_2()}>Toggle_2</button>
       <button onClick={() => setToggle_2(false)}>off_2</button>
       <button onClick={() => setToggle_2(true)}>on_2</button>
+     
 
-
+     <div>
+     {data && data.map((item)=>(
+      <div key={item.id}>
+      <h3>{item.title}</h3>
+        <p>{item.category}</p>
+        <img scr={item.image} alt={item.title} width={"100"}/>
+      <hr/>
+      </div>
+     ))}
+     </div>
     </>
+  
+
   )
 }
 
