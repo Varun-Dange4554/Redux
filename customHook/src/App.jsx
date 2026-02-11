@@ -43,7 +43,7 @@ function App () {
       <div key={item.id}>
       <h3>{item.title}</h3>
         <p>{item.category}</p>
-        <img scr={item.image} alt={item.title} width={"100"}/>
+        <img src={item.image}></img>
       <hr/>
       </div>
      ))}
