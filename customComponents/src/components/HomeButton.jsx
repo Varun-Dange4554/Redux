@@ -7,6 +7,7 @@ export const HomeButton = ({value}) => {
     <Button
         value={{
             name:value,
+            clssName:"home-btn",
             style:{
                 padding: '.25 1rem',
                 borderRadiust: '.4rem',

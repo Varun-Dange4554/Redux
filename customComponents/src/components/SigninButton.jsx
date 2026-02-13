@@ -1,7 +1,7 @@
 import { Button } from "./Button"
 
 
-export const Sign_in_Button = ({ value }) => {
+export const SigninButton = ({ value }) => {
   return (
     <>
       <Button
