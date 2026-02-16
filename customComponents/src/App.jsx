@@ -1,4 +1,5 @@
 import { Button } from "./components/Button"
+import Card from "./components/card"
 import { HomeButton } from "./components/HomeButton"
 import { SigninButton } from "./components/SigninButton"
 import './index.css'
@@ -24,7 +25,7 @@ const App = () => {
         }
       }}
     />
-      
+      <Card name="varun"/>
     </>
   )
 }
