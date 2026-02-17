@@ -7,11 +7,13 @@ export const App = () => {
   const style = {
     padding:"10px",
     margin:"5px",
-    Width:"15px"
+    Width:"15px",
+    textAlign:"center"
   }
   return (
     <>
-   <InputBox length={4} style={style}/>
+   <InputBox setMainVal={(v) => setValue(v)} perBox={1} length={4} style={style} />
+   <h1>{value}</h1>
       
     </>
   )

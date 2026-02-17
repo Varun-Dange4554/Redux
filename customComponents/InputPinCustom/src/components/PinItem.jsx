@@ -1,10 +1,22 @@
+import React from "react";
+export const PinItem = React.forwardRef (({style,max, handleChange,BackSpacehandle }, ref) => {
 
-export const PinItem = ({style}) => {
+  const handleKeyUp = (e) =>{
+
+    switch (e.keyCode) {
+      case 8 :
+        BackSpacehandle()
+        break;
+
+        default:
+          handleChange(e.target.value);
+    }
+  }
   return (
     <>
-    <input style={style} type="text"/>
+    <input ref={ref} style={style} maxLength={max} onKeyUp={handleKeyUp}/>
     </>
   )
-}
+});
 
 
