@@ -16,7 +16,7 @@ export const InputBox = ({ setMainVal, perBox, length, style }) => {
     setValues(updated);
     setMainVal(updated.join(""));
 
-    // Move to next input if value entered
+  
     if (val !== "" && index < length - 1) {
       inputsRef.current[index + 1]?.focus();
     }
@@ -24,7 +24,7 @@ export const InputBox = ({ setMainVal, perBox, length, style }) => {
 
   const handleBackspace = (index) => {
     if (index > 0) {
-      inputsRef.current[index - 1]?.focus();
+      inputsRef.current[index - 1]?.focus(); 
     }
   };
 
